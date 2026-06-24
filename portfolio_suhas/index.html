@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suhas G | Cyber Security Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js"></script>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar">
+    <div class="nav-brand">
+      <span class="nav-bracket">[</span>
+      <span class="nav-name">RUDR03</span>
+      <span class="nav-bracket">]</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+      <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+      <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+      <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+      <li><a href="#achievements" class="nav-link" data-section="achievements">Achievements</a></li>
+      <li><a href="#certifications" class="nav-link" data-section="certifications">Certifications</a></li>
+      <li><a href="#blogs" class="nav-link" data-section="blogs">Blogs</a></li>
+    </ul>
+    <div class="nav-status">
+      <span class="status-dot"></span>
+      <span class="status-text">ACTIVE</span>
+    </div>
+  </nav>
+
+  <!-- ===== FIXED FLOATING BUTTONS ===== -->
+  <div class="floating-actions">
+    <a href="mailto:suhasg.work@gmail.com" class="fab fab-mail" title="Send me an email" aria-label="Email me">
+      <i class="ph-bold ph-envelope"></i>
+      <span>Email me</span>
+    </a>
+    <button class="fab fab-up" id="scrollUpBtn" title="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+      <i class="ph-bold ph-arrow-up"></i>
+    </button>
+  </div>
+
+  <!-- ===== RESUME MODAL ===== -->
+  <div id="resumeModal" class="modal-overlay" onclick="closeModal('resumeModal')">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal('resumeModal')">
+        <i class="ph-bold ph-x"></i>
+      </button>
+      <div class="modal-header">
+        <span class="modal-tag">// RESUME</span>
+        <h3>Suhas G — Cyber Security Engineer</h3>
+      </div>
+      <div class="modal-body resume-preview">
+        <div class="resume-section">
+          <div class="resume-row">
+            <div>
+              <div class="resume-name">SUHAS G</div>
+              <div class="resume-title-small">Cyber Security Engineer | Penetration Tester | Bug Bounty Hunter</div>
+              <div class="resume-contact">Bengaluru, Karnataka | suhasg.work@gmail.com | linkedin.com/in/suhas-g-/</div>
+            </div>
+          </div>
+        </div>
+        <div class="resume-section">
+          <div class="resume-section-title">PROFESSIONAL SUMMARY</div>
+          <p>Cybersecurity professional with 1+ year of experience in VAPT, penetration testing, and compliance audits across web, mobile, and network systems. Active bug bounty hunter with 15+ organizations secured and $4k+ in rewards.</p>
+        </div>
+        <div class="resume-section">
+          <div class="resume-section-title">EXPERIENCE</div>
+          <div class="resume-item">
+            <strong>Cyber Security Engineer</strong> — Deccan Infotech Pvt Ltd (Oct 2025 – May 2026)<br/>
+            <small>CERT-IN Empanelled | 80+ VAPT assessments | Compliance audits: SEBI, RBI, NPCI, UIDAI</small>
+          </div>
+          <div class="resume-item">
+            <strong>Cyber Security Intern</strong> — Blipsnip / Cybivalue (Apr – Jul 2025)<br/>
+            <small>Web VAPT, OWASP Top 10, Burp Suite, Nmap, Wireshark</small>
+          </div>
+          <div class="resume-item">
+            <strong>Bug Bounty Hunter</strong> — HackerOne / Bugcrowd (Nov 2025 – Present)<br/>
+            <small>1 Critical, 6 High, 6 Medium reported | $4k+ rewards | 10+ Acknowledgements</small>
+          </div>
+        </div>
+        <div class="resume-section">
+          <div class="resume-section-title">EDUCATION</div>
+          <div class="resume-item"><strong>MCA</strong> — PES University, Bengaluru (2024–2025) | 7.5 CGPA</div>
+          <div class="resume-item"><strong>BCA</strong> — KLE's College of BCA, Dharwad (2020–2023) | 7.56 CGPA</div>
+        </div>
+        <div class="resume-section">
+          <div class="resume-section-title">CERTIFICATIONS</div>
+          <div class="resume-item">CEH | EHE | Google Cybersecurity (Coursera) | SQL Injections Master Class (EC-Council)</div>
+        </div>
+        <div class="resume-section">
+          <div class="resume-section-title">SKILLS</div>
+          <div class="resume-item">Burp Suite Pro | Nmap | Nuclei | FFUF | Metasploit | OWASP ZAP | SQLMap | Python | Java | CVSS</div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="assets/Suhas_G_Resume.pdf" download class="btn-download">
+          <i class="ph-bold ph-download-simple"></i> Download Resume
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CERT MODAL ===== -->
+  <div id="certModal" class="modal-overlay" onclick="closeModal('certModal')">
+    <div class="modal-box modal-cert" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal('certModal')">
+        <i class="ph-bold ph-x"></i>
+      </button>
+      <div class="modal-header">
+        <span class="modal-tag" id="certModalTag">// CERTIFICATE</span>
+        <h3 id="certModalTitle">Certificate</h3>
+      </div>
+      <div class="modal-body cert-img-wrap">
+        <img id="certModalImg" src="" alt="Certificate" />
+        <div id="certModalPlaceholder" class="cert-placeholder">
+          <i class="ph-bold ph-certificate"></i>
+          <p>Certificate image coming soon</p>
+          <small>Place your certificate file in assets/certs/</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
+
+    <!-- ===== SECTION 1: HOME ===== -->
+    <section id="home" class="section section-home">
+      <div class="scan-line"></div>
+      <div class="home-grid">
+
+        <!-- LEFT 40% -->
+        <div class="home-left">
+          <div class="glitch-wrapper">
+            <div class="home-tag">// IDENTITY</div>
+            <h1 class="home-name glitch" data-text="SUHAS G">SUHAS G</h1>
+            <div class="home-alias">alias: <span class="alias-text">Rudr03</span></div>
+          </div>
+          <p class="home-title">Cyber Security Engineer</p>
+          <div class="home-badges">
+            <span class="badge">BCA</span>
+            <span class="badge">MCA</span>
+            <span class="badge badge-accent">CEH</span>
+            <span class="badge badge-accent">EHE</span>
+            <span class="badge">BugHunter</span>
+          </div>
+
+          <button class="resume-btn" onclick="openModal('resumeModal')">
+            <i class="ph-bold ph-file-text"></i>
+            <span>View Resume</span>
+            <div class="btn-corner"></div>
+          </button>
+
+          <!-- Social Icons Grid -->
+          <div class="social-grid">
+            <a href="https://www.linkedin.com/in/suhas-g-/" target="_blank" class="social-icon" title="LinkedIn" aria-label="LinkedIn">
+              <i class="ph-bold ph-linkedin-logo"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://hackerone.com/rudr03?type=user" target="_blank" class="social-icon" title="HackerOne" aria-label="HackerOne">
+              <i class="ph-bold ph-bug-beetle"></i>
+              <span>HackerOne</span>
+            </a>
+            <a href="https://tryhackme.com/p/Rudr03" target="_blank" class="social-icon" title="TryHackMe" aria-label="TryHackMe">
+              <i class="ph-bold ph-shield-check"></i>
+              <span>TryHackMe</span>
+            </a>
+            <a href="https://medium.com/@Rudr03" target="_blank" class="social-icon" title="Medium" aria-label="Medium">
+              <i class="ph-bold ph-article"></i>
+              <span>Medium</span>
+            </a>
+            <a href="https://profile.hackthebox.com/profile/019ea117-371d-7093-a36a-2b5fecdf63d9" target="_blank" class="social-icon" title="HackTheBox" aria-label="Hack The Box">
+              <i class="ph-bold ph-terminal-window"></i>
+              <span>Hack The Box</span>
+            </a>
+            <a href="https://leetcode.com/u/Mr_Suhas/" target="_blank" class="social-icon" title="LeetCode" aria-label="LeetCode">
+              <i class="ph-bold ph-code"></i>
+              <span>LeetCode</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- RIGHT 60% -->
+        <div class="home-right">
+          <div class="terminal-box">
+            <div class="terminal-bar">
+              <span class="t-dot t-red"></span>
+              <span class="t-dot t-yellow"></span>
+              <span class="t-dot t-green"></span>
+              <span class="t-title">~/rudr03/about.sh</span>
+            </div>
+            <div class="terminal-body">
+              <p class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">cat about.txt</span></p>
+              <div class="t-output">
+                <p>Hi 👋</p>
+                <p>My self <strong>Suhas</strong> and I also use <span class="highlight">"Rudr03"</span> as hacker alias.</p>
+                <p>Cyber Security and Hacking is not just my <strong>JOB</strong> — it's also my <span class="highlight">passion</span>. I love breaking and securing things.</p>
+                <p>Most active and always growing person with <span class="highlight">1+ year</span> of experience across internships, full-time work, and freelancing.</p>
+                <p>I am also a <span class="highlight">Bug Bounty Hunter</span> who has secured <strong>15+ organizations</strong> and received Rewards & Acknowledgements.</p>
+              </div>
+              <p class="t-line t-blink"><span class="t-prompt">$</span> <span class="cursor">▊</span></p>
+            </div>
+          </div>
+
+          <!-- Stats Cards -->
+          <div class="stats-row">
+            <div class="stat-card">
+              <div class="stat-tag">// ROLE 01</div>
+              <div class="stat-icon"><i class="ph-bold ph-shield-warning"></i></div>
+              <div class="stat-title">Cyber Security Engineer</div>
+              <div class="stat-detail">1 Year Experience</div>
+              <div class="stat-sub">Penetration Tester | VAPT</div>
+            </div>
+            <div class="stat-card stat-card-alt">
+              <div class="stat-tag">// ROLE 02</div>
+              <div class="stat-icon"><i class="ph-bold ph-bug"></i></div>
+              <div class="stat-title">Bug Bounty Hunter</div>
+              <div class="stat-detail">9 Months Experience</div>
+              <div class="stat-sub">15+ Orgs | $4k+ Rewards | 10 Acks</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== SECTION 2: EDUCATION ===== -->
+    <section id="education" class="section section-alt">
+      <div class="section-header">
+        <span class="section-tag">// SECTION 02</span>
+        <h2 class="section-title">Education</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-left">
+            <div class="timeline-year">2018</div>
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="tl-tag">10th / SSLC</div>
+            <h3 class="tl-title">Secondary Education</h3>
+            <div class="tl-place"><i class="ph-bold ph-buildings"></i> Little Flower English Medium High School, Hosapete – Karnataka</div>
+            <div class="tl-score"><i class="ph-bold ph-chart-bar"></i> Score: <span>83.36%</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-left">
+            <div class="timeline-year">2019–20</div>
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="tl-tag">11th & 12th / PUC</div>
+            <h3 class="tl-title">Pre-University (PCMB)</h3>
+            <div class="tl-place"><i class="ph-bold ph-buildings"></i> National College, Hosapete – Karnataka</div>
+            <div class="tl-score"><i class="ph-bold ph-chart-bar"></i> Score: <span>65.56%</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-left">
+            <div class="timeline-year">2020–23</div>
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="tl-tag">Bachelor's Degree</div>
+            <h3 class="tl-title">BCA — Bachelor of Computer Applications</h3>
+            <div class="tl-place"><i class="ph-bold ph-buildings"></i> KLE's College of BCA, Dharwad – Karnataka</div>
+            <div class="tl-score"><i class="ph-bold ph-chart-bar"></i> CGPA: <span>7.56</span></div>
+            <div class="tl-score"><i class="ph-bold ph-graduation-cap"></i> Graduated: <span>Oct 2023</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-left">
+            <div class="timeline-year">2024–25</div>
+            <div class="timeline-dot timeline-dot-last"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="tl-tag">Master's Degree</div>
+            <h3 class="tl-title">MCA — Master of Computer Applications</h3>
+            <div class="tl-place"><i class="ph-bold ph-buildings"></i> PES University, Bengaluru – Karnataka</div>
+            <div class="tl-score"><i class="ph-bold ph-chart-bar"></i> CGPA: <span>7.5</span></div>
+            <div class="tl-score"><i class="ph-bold ph-graduation-cap"></i> Graduated: <span>31 Aug 2025</span></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== SECTION 3: EXPERIENCE ===== -->
+    <section id="experience" class="section">
+      <div class="section-header">
+        <span class="section-tag">// SECTION 03</span>
+        <h2 class="section-title">Experience</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-left">
+            <div class="timeline-year">Apr–Jul<br/>2025</div>
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="tl-tag">Internship · Offline</div>
+            <h3 class="tl-title">Cyber Security Intern</h3>
+            <div class="tl-place"><i class="ph-bold ph-buildings"></i> Blipsnip Consultancy with Cybivalue, Bengaluru</div>
+            <ul class="tl-list">
+              <li>Gained practical experience in web application VAPT and security testing</li>
+              <li>Used Burp Suite, OWASP ZAP, Nmap, and Wireshark to identify vulnerabilities</li>
+              <li>Learned and applied OWASP Top 10 concepts in real-world assessments</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-left">
+            <div class="timeline-year">Oct 25–<br/>May 26</div>
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="exp-tags">
+              <div class="tl-tag">Full-Time · Onsite</div>
+              <span class="cert-badge">CERT-IN Empanelled</span>
+            </div>
+            <h3 class="tl-title">Cyber Security Engineer</h3>
+            <div class="tl-place"><i class="ph-bold ph-buildings"></i> Deccan Infotech Private Ltd, Bengaluru</div>
+            <ul class="tl-list">
+              <li>Performed grey box and black box VAPT and penetration testing</li>
+              <li>Conducted VAPT on 80+ web, mobile, desktop applications and network assessments</li>
+              <li>Audited compliance frameworks: UIDAI, NPCI, SEBI, RBI with 98% acceptance rate</li>
+              <li>Collaborated with professional teams, CISOs, and government officials</li>
+              <li>Built AI-integrated automation workflow for basic VAPT operations</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-left">
+            <div class="timeline-year">Nov 25–<br/>Present</div>
+            <div class="timeline-dot timeline-dot-active"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="tl-tag">Freelance · Self-Employed</div>
+            <h3 class="tl-title">Bug Bounty Hunter</h3>
+            <div class="tl-place"><i class="ph-bold ph-globe"></i> HackerOne | Bugcrowd | Self-Hosted Programs</div>
+            <ul class="tl-list">
+              <li>15+ programs / organizations secured, $4k+ in rewards, 10+ acknowledgements received</li>
+              <li>1 Critical, 6 High, 6 Medium, 10 Low valid vulnerabilities reported across platforms</li>
+              <li>All Black Box hunting with self-built methodologies and custom workflows</li>
+            </ul>
+            <div class="vuln-chips">
+              <span class="chip chip-critical">1 Critical</span>
+              <span class="chip chip-high">6 High</span>
+              <span class="chip chip-medium">6 Medium</span>
+              <span class="chip chip-low">10 Low</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== SECTION 4: SKILLS ===== -->
+    <section id="skills" class="section section-alt">
+      <div class="section-header">
+        <span class="section-tag">// SECTION 04</span>
+        <h2 class="section-title">Knowledge &amp; Skills</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="skills-grid">
+
+        <!-- LEFT -->
+        <div class="skills-col">
+          <div class="skills-block">
+            <div class="skills-block-title"><i class="ph-bold ph-code"></i> Programming Languages</div>
+            <div class="skill-tags">
+              <span class="stag">Java</span>
+              <span class="stag">SQL</span>
+              <span class="stag">Python</span>
+            </div>
+          </div>
+          <div class="skills-block">
+            <div class="skills-block-title"><i class="ph-bold ph-monitor"></i> Operating Systems</div>
+            <div class="skill-tags">
+              <span class="stag">Windows</span>
+              <span class="stag">Kali Linux</span>
+              <span class="stag">Ubuntu</span>
+            </div>
+          </div>
+          <div class="skills-block">
+            <div class="skills-block-title"><i class="ph-bold ph-globe"></i> Web Development</div>
+            <div class="skill-tags">
+              <span class="stag">HTML</span>
+              <span class="stag">CSS</span>
+              <span class="stag">JavaScript</span>
+            </div>
+          </div>
+          <div class="skills-block">
+            <div class="skills-block-title"><i class="ph-bold ph-wrench"></i> Dev Tools</div>
+            <div class="skill-tags">
+              <span class="stag">VS Code</span>
+              <span class="stag">GitHub</span>
+            </div>
+          </div>
+          <div class="skills-block">
+            <div class="skills-block-title"><i class="ph-bold ph-book-open"></i> Frameworks &amp; Standards</div>
+            <div class="skill-tags">
+              <span class="stag">OWASP Top 10</span>
+              <span class="stag">CIS Top 25</span>
+              <span class="stag">NIST</span>
+              <span class="stag">CVSS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="skills-col skills-col-dark">
+          <div class="skills-col-header">
+            <i class="ph-bold ph-shield-warning"></i>
+            Ethical Hacking | VAPT | Penetration Testing
+          </div>
+
+          <div class="skills-block">
+            <div class="skills-block-title"><i class="ph-bold ph-magnifying-glass"></i> Reconnaissance</div>
+            <div class="skill-tags">
+              <span class="stag stag-red">Nmap</span>
+              <span class="stag stag-red">Amass</span>
+              <span class="stag stag-red">Subfinder</span>
+              <span class="stag stag-red">Assetfinder</span>
+              <span class="stag stag-red">Shodan</span>
+              <span class="stag stag-red">Censys</span>
+              <span class="stag stag-red">HTTPX</span>
+              <span class="stag stag-red">GAU</span>
+              <span class="stag stag-red">Waybackurls</span>
+              <span class="stag stag-red">DNSRecon</span>
+            </div>
+          </div>
+
+          <div class="skills-block">
+            <div class="skills-block-title"><i class="ph-bold ph-crosshair"></i> Scanning &amp; Enumeration</div>
+            <div class="skill-tags">
+              <span class="stag stag-red">FFUF</span>
+              <span class="stag stag-red">Gobuster</span>
+              <span class="stag stag-red">Nikto</span>
+              <span class="stag stag-red">WhatWeb</span>
+              <span class="stag stag-red">SSLScan</span>
+            </div>
+          </div>
+
+          <div class="skills-block">
+            <div class="skills-block-title"><i class="ph-bold ph-bug"></i> Vulnerability Assessment</div>
+            <div class="skill-tags">
+              <span class="stag stag-red">Nuclei</span>
+              <span class="stag stag-red">Nessus</span>
+              <span class="stag stag-red">Burp Suite Pro</span>
+              <span class="stag stag-red">OWASP ZAP</span>
+              <span class="stag stag-red">WPScan</span>
+            </div>
+          </div>
+
+          <div class="skills-block">
+            <div class="skills-block-title"><i class="ph-bold ph-lightning"></i> Exploitation</div>
+            <div class="skill-tags">
+              <span class="stag stag-red">SQLMap</span>
+              <span class="stag stag-red">XSStrike</span>
+              <span class="stag stag-red">Metasploit</span>
+              <span class="stag stag-red">Hashcat</span>
+              <span class="stag stag-red">John the Ripper</span>
+            </div>
+          </div>
+
+          <div class="skills-block">
+            <div class="skills-block-title"><i class="ph-bold ph-file-text"></i> Post-Exploitation &amp; Reporting</div>
+            <div class="skill-tags">
+              <span class="stag stag-red">CVSS Scoring</span>
+              <span class="stag stag-red">Report Writing</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== SECTION 5: CERTIFICATIONS & ACHIEVEMENTS ===== -->
+    <section id="certifications" class="section">
+      <div class="section-header">
+        <span class="section-tag">// SECTION 05</span>
+        <h2 class="section-title">Certifications &amp; Achievements</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <!-- ACHIEVEMENTS (above, full width) -->
+      <div id="achievements" class="achievements-band">
+        <div class="ach-header"><i class="ph-bold ph-trophy"></i> Achievements</div>
+        <div class="ach-grid">
+          <div class="ach-card">
+            <i class="ph-bold ph-crown"></i>
+            <div class="ach-title">Top 1 in Private Program</div>
+            <div class="ach-sub">Bug Bounty — HackerOne</div>
+          </div>
+          <div class="ach-card">
+            <i class="ph-bold ph-shield-check"></i>
+            <div class="ach-title">Top 6% on TryHackMe</div>
+            <div class="ach-sub">Global Ranking</div>
+          </div>
+          <div class="ach-card">
+            <i class="ph-bold ph-medal"></i>
+            <div class="ach-title">Most Disciplined Male Student</div>
+            <div class="ach-sub">BCA Batch 2023</div>
+          </div>
+          <div class="ach-card">
+            <i class="ph-bold ph-star"></i>
+            <div class="ach-title">Excellence in Placements</div>
+            <div class="ach-sub">BCA Degree Recognition</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CERTS LIST -->
+      <div class="certs-header"><i class="ph-bold ph-certificate"></i> Certifications</div>
+      <div class="certs-grid">
+
+        <div class="cert-card" onclick="openCert('CEH — Certified Ethical Hacker','assets/certs/ceh.jpeg')">
+          <div class="cert-icon"><i class="ph-bold ph-certificate"></i></div>
+          <div class="cert-info">
+            <div class="cert-name">CEH</div>
+            <div class="cert-full">Certified Ethical Hacker</div>
+            <div class="cert-issuer">EC-Council</div>
+          </div>
+          <i class="ph-bold ph-arrow-square-out cert-arrow"></i>
+        </div>
+
+        <div class="cert-card" onclick="openCert('EHE — Ethical Hacking Essentials','assets/certs/ehe.jpeg')">
+          <div class="cert-icon"><i class="ph-bold ph-certificate"></i></div>
+          <div class="cert-info">
+            <div class="cert-name">EHE</div>
+            <div class="cert-full">Ethical Hacking Essentials</div>
+            <div class="cert-issuer">EC-Council</div>
+          </div>
+          <i class="ph-bold ph-arrow-square-out cert-arrow"></i>
+        </div>
+
+        <div class="cert-card" onclick="openCert('Google — Foundations in Cybersecurity','assets/certs/google_cs.png')">
+          <div class="cert-icon"><i class="ph-bold ph-certificate"></i></div>
+          <div class="cert-info">
+            <div class="cert-name">Cybersecurity Foundations</div>
+            <div class="cert-full">Foundations in Cybersecurity</div>
+            <div class="cert-issuer">Google / Coursera</div>
+          </div>
+          <i class="ph-bold ph-arrow-square-out cert-arrow"></i>
+        </div>
+
+        <div class="cert-card" onclick="openCert('SQL Injection Attacks Master Class','assets/certs/sqli.png')">
+          <div class="cert-icon"><i class="ph-bold ph-certificate"></i></div>
+          <div class="cert-info">
+            <div class="cert-name">SQL Injection Master Class</div>
+            <div class="cert-full">SQL Injection Attacks Master Class</div>
+            <div class="cert-issuer">EC-Council</div>
+          </div>
+          <i class="ph-bold ph-arrow-square-out cert-arrow"></i>
+        </div>
+
+        <div class="cert-card" onclick="openCert('TryHackMe — Web Testing Fundamentals 101','assets/certs/thm_web.png')">
+          <div class="cert-icon"><i class="ph-bold ph-certificate"></i></div>
+          <div class="cert-info">
+            <div class="cert-name">Web Testing Fundamentals 101</div>
+            <div class="cert-full">Web Fundamentals Learning Path</div>
+            <div class="cert-issuer">TryHackMe</div>
+          </div>
+          <i class="ph-bold ph-arrow-square-out cert-arrow"></i>
+        </div>
+
+        <div class="cert-card" onclick="openCert('TryHackMe — Penetration Tester Path','assets/certs/thm_pt.png')">
+          <div class="cert-icon"><i class="ph-bold ph-certificate"></i></div>
+          <div class="cert-info">
+            <div class="cert-name">Penetration Tester Path</div>
+            <div class="cert-full">Jr Penetration Tester Learning Path</div>
+            <div class="cert-issuer">TryHackMe</div>
+          </div>
+          <i class="ph-bold ph-arrow-square-out cert-arrow"></i>
+        </div>
+
+        <div class="cert-card" onclick="openCert('TCS ION — Young Professional','assets/certs/tcs.jpg')">
+          <div class="cert-icon"><i class="ph-bold ph-certificate"></i></div>
+          <div class="cert-info">
+            <div class="cert-name">Young Professional</div>
+            <div class="cert-full">Career Edge — Young Professional</div>
+            <div class="cert-issuer">TCS ION</div>
+          </div>
+          <i class="ph-bold ph-arrow-square-out cert-arrow"></i>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== SECTION 6: BLOGS & WRITEUPS ===== -->
+    <section id="blogs" class="section section-alt">
+      <div class="section-header">
+        <span class="section-tag">// SECTION 06</span>
+        <h2 class="section-title">Blogs &amp; Write-ups</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="blogs-cta">
+        <div class="blog-platform-card">
+          <div class="blog-icon"><i class="ph-bold ph-article"></i></div>
+          <div class="blog-platform-name">Medium</div>
+          <div class="blog-platform-handle">@Rudr03</div>
+          <p class="blog-platform-desc">Security write-ups, bug bounty findings, and research articles on cybersecurity topics.</p>
+          <a href="https://medium.com/@Rudr03" target="_blank" class="blog-visit-btn">
+            <i class="ph-bold ph-arrow-square-out"></i> Read on Medium
+          </a>
+        </div>
+        <div class="blog-coming">
+          <div class="blog-coming-icon"><i class="ph-bold ph-pencil-simple-line"></i></div>
+          <div class="blog-coming-text">More write-ups and research <br/>articles coming soon...</div>
+          <div class="blog-coming-sub">Follow @Rudr03 on Medium to stay updated</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="nav-bracket">[</span>
+        <span class="footer-name">SUHAS G</span>
+        <span class="nav-bracket">]</span>
+        <span class="footer-alias"> aka Rudr03</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/suhas-g-/" target="_blank"><i class="ph-bold ph-linkedin-logo">LinkedIn</i></a>
+        <a href="https://hackerone.com/rudr03?type=user" target="_blank"><i class="ph-bold ph-bug-beetle"></i></a>
+        <a href="https://medium.com/@Rudr03" target="_blank"><i class="ph-bold ph-article"></i></a>
+        <a href="mailto:suhasg.work@gmail.com"><i class="ph-bold ph-envelope"></i></a>
+      </div>
+      <div class="footer-copy">
+        <span>&copy; 2025 Suhas G.</span>
+        <span class="footer-sep">|</span>
+        <span>Built for the hunt.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
